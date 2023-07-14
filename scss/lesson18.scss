@@ -1,0 +1,34 @@
+$color:brown;
+@import 'reset.scss';
+
+%section{
+    width: 700px;
+    height: 500px;
+    border-radius: 20px;
+}
+@mixin fonts($f, $c, $bg){
+    font-size: $f;
+    color: $c;
+    background-color: $bg
+}
+
+.wrap{
+    @extend %section;
+    background-color: blue;
+    &:hover{
+        background-color: cadetblue;
+    }
+    h2{
+        @include fonts(60px, red, none);
+        color: $color;
+        &:hover{
+            color: rgb(255, 0, 0);
+        }    
+    }
+    &:hover{
+        color: white;
+    }
+    p{
+        @include fonts(30px, coral, black);
+    }
+}

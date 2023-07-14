@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  width: 700px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.wrap {
+  background-color: blue;
+}
+.wrap:hover {
+  background-color: cadetblue;
+}
+.wrap h2 {
+  font-size: 60px;
+  color: red;
+  background-color: none;
+  color: brown;
+}
+.wrap h2:hover {
+  color: rgb(255, 0, 0);
+}
+.wrap:hover {
+  color: white;
+}
+.wrap p {
+  font-size: 30px;
+  color: coral;
+  background-color: black;
+}

@@ -1,0 +1,31 @@
+@import 'reset.scss';
+%box{
+    background: rgba(26, 161, 121, 0.5);
+    border-radius: 16px;
+}
+@mixin width($w){
+    width: $w;
+}
+.main{
+    margin: auto;
+    @include width(992px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main__big{
+        height: 360px;
+        background: rgba(26, 161, 121, 0.5);
+        @include width(992px);
+    }
+    .main__little{
+        margin-top: 30px;
+        .little__box{
+        @extend %box;
+        }
+        display: grid;
+        grid-template-columns: repeat(3, 290px);
+        grid-template-rows: repeat(2, 211px);
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
+    }
+}

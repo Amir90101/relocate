@@ -1,0 +1,57 @@
+@import 'reset.scss';
+%box{
+    background: rgba(26, 161, 121, 0.5);
+    border-radius: 16px;
+    height: 160px;
+}
+@mixin width($w){
+    width: $w;
+}
+.main{
+    width: 690px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 690px;
+    grid-template-rows: repeat(4, 160px);
+    grid-row-gap: 30px;
+    .main__flex{
+        display: flex;
+        justify-content: space-between; 
+        .box{
+            @extend %box;
+        }
+        .flex__first__one{
+            @include width(510px)
+        }
+        .flex__first__two{
+            @include width(150px)
+        }
+        .flex__second__one{
+            @include width(210px)
+        }
+        .flex__second__two{
+            @include width(450px)
+        }
+        .flex__thrs__one{
+            @include width(150px)
+        }
+        .flex__thrs__two{
+            @include width(330px)
+        }
+        .flex__thrs__thr{
+            @include width(150px)
+        }
+        .flex__fours__one{
+            @include width(210px)
+        }
+        .flex__fours__two{
+            @include width(210px)
+        }
+        .flex__fours__thr{
+            @include width(90px)
+        }
+        .flex__fours__fo{
+            @include width(90px)
+        }
+    }
+}
